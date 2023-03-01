@@ -171,7 +171,7 @@ h4{
 
 .icon-small{
     font-size: 1.10em;
-    margin: auto;
+    margin-left: auto;
 }
 
 .icon-large{
@@ -359,6 +359,8 @@ nav .fly-item{
     width: 13px;
     background-color: var(--secondary-dark-color);
     border-radius: var(--percentage);
+    font-size: 10px;
+    padding: 5px;
 }
 
 .mega .flexcol{
@@ -368,6 +370,136 @@ nav .fly-item{
     margin-bottom: 1.5em;
     z-index: 1;
 }
+
+   /* *************** 01.  HEADER
+      C HEADER MAIN DEPARTMENT CATEGORY
+          *********************** */
+
+.header-main{
+    background-color: var(--secondary-color);
+    padding: 1.5em 0;
+    margin-bottom: 2em;
+}
+
+.dpt-cat{
+    position: relative;
+    z-index: 10;
+}
+
+.dpt-cat .dpt-head{
+    position: relative;
+    width: 300px;
+    padding: 0.75em 1.5em;
+    background-color: var(--primary-color);
+    border-radius: 7px 7px 0 0;
+    color: var(--white-color);
+    margin-bottom: -1.60em;
+    margin-left: 25px;
+}
+
+.dpt-cat .dpt-head .mini-text{
+    color: var(--light-bg-color);
+}
+
+.dpt-cat .dpt-trigger{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1.3em;
+    height: 60px;
+    width: 60px;
+}
+
+ /* *****DEPARTMENT MENU ******* */
+
+ .dpt-menu{
+    position: absolute;
+    top: var(--percentage100);
+    width: 300px;
+    background-color: var(--white-color);
+    border: 1px solid var(--light-text-color);
+    border: 0;
+    border-bottom: 0;
+    margin-left: 25px;
+}
+
+.dpt-menu > ul > li > a{
+    font-weight: var(--fw5);
+    padding: 0 1.5em;
+    border-bottom: 1px solid var(--border-color);
+    font-size: var(--font-small);
+    height: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+
+   /* 01 HEADER *********************
+        SEARCH FORM
+        *********** */
+.header-main .right{
+    flex: 1;
+}
+
+form{
+    position: relative;
+}
+
+form.search input{
+    line-height: 3.25em;
+    padding: 0 7em 0 4.5em;
+    border: 0;
+    outline: 0;
+    width: 78%;
+    border-radius: 7px;
+    font-size: 0.9em;
+    font-weight: var(--fw6);
+}
+
+form.search :where(span,button){
+    position: absolute;
+    top: 5;
+    padding: 1.45em 1.5em;
+    font-size: 1em;
+    color: var(--light-text-color);
+    height: var(--percentage100);
+}
+
+form.search button{
+    right: 200px;
+    border: 0;
+    outline: 0;
+    font-weight: 0.875em;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
+    transition: var(--trans-background); 
+    padding-top: 15px;
+}
+
+.header-main .right{
+    margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 nav .mega {
     position: absolute;
@@ -381,8 +513,17 @@ nav .mega {
     background-color: var(--light-bg-color);
     box-sizing: rgb(0 0 0/ 20%) 0 30px 20px -30px;
     z-index: 100;
-    
+
+    display: none;
 }
+
+nav li.has-child:hover .mega{
+    display: block;
+}
+
+
+
+
 nav .mega .wrapper{
     display: flex;
 }
@@ -481,13 +622,19 @@ nav .mega .products .media{
     color: var(--white-color);
 }
 
-
-
-
-
-.secondary-button:hover{
-    color: var(--light-bg-color);
+.view-all{
+    font-size: var(--font-small);
+    display: flex;
+    gap: 1em;
+    transition: var(--trans-color);
 }
+
+.mini-text{
+    font-size: var(--font-small);
+    color: var(--light-text-color);
+}
+
+
 
 
 
@@ -605,9 +752,27 @@ nav .mega .products .media{
         text-align: center;
         color: var(--secondary-dark-color);
     }
-
-
-
+    .header-main .right{
+        max-width: 900px;
+        margin-left: 100px;
+    }
+     /* *****DEPARTMENT MENU ******* */
+     .dpt-menu{
+        position: absolute;
+        top: var(--percentage100);
+        width: 300px;
+        background-color: var(--white-color);
+        border: 1px solid var(--border-color);
+        border: 0;
+        border-bottom: 0;
+        margin-left: 25px;
+    }
+    
+    .dpt-menu > ul > li > a{
+        font-weight: var(--fw5);
+        padding: 0 1.5em;
+        border-bottom: 1px solid var(--border-color);
+    }
 
 
 }
