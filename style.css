@@ -433,6 +433,10 @@ nav .fly-item{
     text-align: center;
 }
 
+.dpt-menu .has-child:hover ul{
+    display: block;
+}
+
 .dpt-menu .has-child > ul, .dpt-menu .mega{
     position: absolute;
     top: 0;
@@ -453,7 +457,7 @@ nav .fly-item{
 
     /* *******SHOWING THE FIRST SIDE MENU ******** */
 .dpt-menu .mega{
-    display: block;
+    display: auto;
 }
 
 .dpt-menu .beauty ul{
@@ -461,33 +465,43 @@ nav .fly-item{
 }
 
 .dpt-menu .electric ul{
-    background-image: url(main/electric.jpg);
+    background-image: url(main/h5.jpg);
+    background-image: cover;
+    
 }
 
 .dpt-menu .fashion ul{
-    background-image: url(main/3rd.jpg);
+    background-image: url(main/h3.jpg);
+    background-size: contain;
 }
 
 .dpt-menu .homekit .mega{
     background-image: url(main/homekit.jpg);
 }
 
-.dpt-menu .has-child > :where(ul..mega)::before{
+.dpt-menu .has-child > :where(ul,.mega)::before{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, rgba(225,225,225,1) 0%, rgb(24, 21, 21));
+    background: linear-gradient(90deg, rgba(225,225,225,1) 0%,);
 }
 
 .dpt-menu .mega{
     width: auto;
     min-width: var(--percentage100);
+}
+
+.dpt-menu .has-child:hover .mega{
     display: flex;
 }
 
+.dpt-menu .has-child:hover li a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 
 
@@ -831,6 +845,65 @@ nav .mega .products .media{
         border-bottom: 1px solid var(--border-color);
     }
 
+    .dpt-menu .has-child > ul, .dpt-menu .mega{
+        position: absolute;
+        top: 0;
+        left: var(--percentage100);
+        width: var(--percentage100);
+        height: auto;
+        min-height: var(--percentage100);
+        padding: 1.5em;
+        font-size: var(--font-small);
+        line-height: 2.5em;
+        border: 1px solid var(--border-color);
+        border-top: 0;
+        display: none;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: auto;
+    }
+
+    .dpt-menu .mega{
+        display: auto;
+    }
+    
+    .dpt-menu .beauty ul{
+        background-image: url(main/Makeup.jpg);
+    }
+    
+    .dpt-menu .electric ul{
+        background-image: url(main/h5.jpg);
+        background-image: cover;
+        
+    }
+    
+    .dpt-menu .fashion ul{
+        background-image: url(main/h3.jpg);
+        background-size: contain;
+    }
+    
+    .dpt-menu .homekit .mega{
+        background-image: url(main/homekit.jpg);
+    }
+    
+    .dpt-menu .has-child > :where(ul,.mega)::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, rgba(225,225,225,1) 0%,);
+    }
+    
+    .dpt-menu .mega{
+        width: auto;
+        min-width: var(--percentage100);
+    }
+    
+    .dpt-menu .has-child:hover .mega{
+        display: flex;
+    }
 
 }
     
