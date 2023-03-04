@@ -179,14 +179,16 @@ h4{
     padding: 0 0.75em 0 0;
 }
 
+
+      /* you can go for auto or */
 .mobile-hide{
-    display: block;
+    display: none;
 }
 
 
 
 /* 01.  HEADER */
-header li > a{
+:where(.off-canvas, header) li > a{
     display: flex;
     position: relative;
     line-height: inherit;
@@ -342,7 +344,7 @@ nav .fly-item{
     right: -32px;
     background-color: var(--primary-color);
 }
-
+    /* touched margin right  */
 .header-nav .right{
     position: relative;
     margin-left:  auto;
@@ -553,7 +555,75 @@ form.search button{
     margin-left: 100px;
 }
 
+/* *********01 HEADER ..........
+        RESPONSIVE MENU - OFF CANVSA********** */
+.site-off{
+    position: fixed;
+    width: 320px;
+    height: var(--percentage100);
+    background-color: var(--white-color);
+    overflow-y: auto;
+    z-index: 1000;
+}
 
+.off-canvas{
+    width: var(--percentage100);
+    height: var(--percentage100);
+    touch-action: auto;
+    padding: 1.5em;
+}
+
+.off-canvas .canvas-head{
+    color: var(--white-color);
+    justify-content: space-between;
+    padding: 1.5em;
+    margin: -1.5em -1.5em 1.5em;
+    background-color: #3586ff;
+    border-bottom-right-radius: 160px 25px;
+}
+
+.off-canvas .canvas-head .logo{
+    z-index: 10;
+    position: relative;
+}
+
+
+.off-canvas .canvas-head .logo .circle{
+    opacity: .75;
+}
+
+.t-close{
+    font-size: 1.25em;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--percentage);
+    background-color: var(--white-color);
+    color: var(--white-color);
+    transition: var(--trans-background-color);
+}
+
+.t-close:hover{
+    color: var(--secondary-dark-color);
+    opacity: .75;
+}
+
+.off-canvas .dpt-head{
+    font-size: var(--font-small);
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    background-color: var(--light-text-color);
+    border-radius: 7px 7px 0 0;
+}
+
+.off-canvas .has-child > :where(ul, .mega){
+    font-size: var(--font-small);
+    font-weight: var(--fw3);
+    line-height: 20px;
+    padding-left: 3em;
+}
+       
+        
 
 
 
@@ -706,9 +776,7 @@ nav .mega .products .media{
 }
 
 
-
-
-
+ 
 
 
 
@@ -736,7 +804,7 @@ nav .mega .products .media{
         display: none;
     }
     .mobile-hide{ 
-        display: none;
+        display: auto;
     }
     .logo a{
         margin-right: 2em;
@@ -750,7 +818,6 @@ nav .mega .products .media{
         margin-left: 1em;
     }
     
-
       /* mega Menu */
     nav .mega{
         position: absolute;

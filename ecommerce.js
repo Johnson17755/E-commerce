@@ -21,3 +21,24 @@ const body = document.querySelector('body'),
       localStorage.setItem("mode", "dark-mode");
     }
  });
+
+  // ********* HEADER SECTION ON MOBILE *****
+          // COPY MENU FOR MOBILE
+   let copyMenu = () => {
+      let depCategory = document.querySelector('.dpt-cat');
+      let dptPlace = document.querySelector('.departments');
+      dptPlace.innerHTML = depCategory.innerHTML;
+
+
+      // COPY INSIDE NAV TO NAV
+      let mainNav = document.querySelector('.header-nav nav');
+      let navPlace = document.querySelector('.off-canvas nav')
+      navPlace.innerHTML = mainNav.innerHTML;
+
+      // COPY HEADER-TOP -WRAPPER TO .THETOP-NAV
+      let topNav = document.querySelector('.header-top .wrapper');
+      let topPlace = document.querySelector('.off-canvas .thetop-nav')
+      topPlace.innerHTML = topNav.innerHTML;
+   }
+
+   copyMenu();
